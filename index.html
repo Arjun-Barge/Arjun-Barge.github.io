@@ -1,21 +1,38 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><link rel="icon" type="image/svg+xml" href="/favicon.ico"/><link rel="apple-touch-icon" href="/apple-touch-icon.png"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#0f0f0e"/><title>Arjun Barge | Developer Portfolio</title><meta property="title" content="Arjun Barge | Developer Portfolio"/><meta name="description" content="Passionate developer crafting digital experiences with precision and creativity."/><meta itemprop="name" content="Arjun Barge | Developer Portfolio"/><meta itemprop="description" content="Passionate developer crafting digital experiences with precision and creativity."/><meta itemprop="image" content=""/><meta property="og:title" content="Arjun Barge | Developer Portfolio"/><meta property="og:description" content="Passionate developer crafting digital experiences with precision and creativity."/><meta property="og:image" content=""/><meta property="og:image:secure_url" content=""/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Arjun Barge | Developer Portfolio"/><meta name="twitter:description" content="Passionate developer crafting digital experiences with precision and creativity."/><meta name="twitter:image" content=""/><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/><meta http-equiv="Pragma" content="no-cache"/><meta http-equiv="Expires" content="0"/><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"><style>html{background-color:#0f0f0e}</style><script type="module" crossorigin src="/assets/index-KtB-TA_Q.js"></script><link rel="stylesheet" crossorigin href="/assets/index-hIIcqIRQ.css"></head><body><div id="root"></div><script>// Safari can pin an old cached root document URL.
-      // Redirect once per tab to a unique query URL so the browser performs
-      // a fresh network fetch of the latest HTML + bundles.
-      (function forceFreshDocumentOnce() {
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><link rel="icon" type="image/svg+xml" href="/favicon.ico"/><link rel="apple-touch-icon" href="/apple-touch-icon.png"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#0f0f0e"/><title>Arjun Barge | Developer Portfolio</title><meta property="title" content="Arjun Barge | Developer Portfolio"/><meta name="description" content="Passionate developer crafting digital experiences with precision and creativity."/><meta itemprop="name" content="Arjun Barge | Developer Portfolio"/><meta itemprop="description" content="Passionate developer crafting digital experiences with precision and creativity."/><meta itemprop="image" content=""/><meta property="og:title" content="Arjun Barge | Developer Portfolio"/><meta property="og:description" content="Passionate developer crafting digital experiences with precision and creativity."/><meta property="og:image" content=""/><meta property="og:image:secure_url" content=""/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Arjun Barge | Developer Portfolio"/><meta name="twitter:description" content="Passionate developer crafting digital experiences with precision and creativity."/><meta name="twitter:image" content=""/><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/><meta http-equiv="Pragma" content="no-cache"/><meta http-equiv="Expires" content="0"/><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"><style>html{background-color:#0f0f0e}</style><script type="module" crossorigin src="/assets/index-PuCJbb5o.js"></script><link rel="stylesheet" crossorigin href="/assets/index-hIIcqIRQ.css"></head><body><div id="root"></div><script>// Build-version based cache update check.
+      // Fetches /version.json with no-store before app boot. If server version
+      // differs from locally remembered version, force-load a unique URL to get
+      // fresh HTML + latest hashed bundles.
+      (async function ensureLatestVersion() {
         try {
-          var GUARD = '__fresh_doc_once';
+          var KEY = '__site_version';
           var u = new URL(window.location.href);
-          if (!u.searchParams.has('_v') && !sessionStorage.getItem(GUARD)) {
-            sessionStorage.setItem(GUARD, '1');
-            u.searchParams.set('_v', Date.now().toString());
-            window.location.replace(u.toString());
-            return;
-          }
+
+          // If we just navigated with cache-busting, clean URL and continue.
           if (u.searchParams.has('_v')) {
             u.searchParams.delete('_v');
             window.history.replaceState({}, '', u.toString());
           }
-          sessionStorage.removeItem(GUARD);
+
+          var base = '/';
+          var response = await fetch(base + 'version.json?v=' + Date.now(), { cache: 'no-store' });
+          if (!response.ok) return;
+
+          var data = await response.json();
+          var latest = String((data && data.version) || '');
+          if (!latest) return;
+
+          var current = localStorage.getItem(KEY);
+          if (!current) {
+            localStorage.setItem(KEY, latest);
+            return;
+          }
+
+          if (current !== latest) {
+            localStorage.setItem(KEY, latest);
+            var fresh = new URL(window.location.href);
+            fresh.searchParams.set('_v', latest);
+            window.location.replace(fresh.toString());
+          }
         } catch (_) {
           // Storage APIs unavailable or blocked: fall back to /latest/ route,
           // which always redirects to a unique root URL and breaks stale cache.
