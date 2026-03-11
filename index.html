@@ -17,6 +17,10 @@
           }
           sessionStorage.removeItem(GUARD);
         } catch (_) {
-          // no-op
+          // Storage APIs unavailable or blocked: fall back to /latest/ route,
+          // which always redirects to a unique root URL and breaks stale cache.
+          if (window.location.pathname !== '/latest/' && window.location.pathname !== '/latest/index.html') {
+            window.location.replace('/latest/?_v=' + Date.now());
+          }
         }
       })();</script></body></html>

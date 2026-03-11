@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Loading Latest Version...</title>
+    <script>
+      // Dedicated recovery entrypoint for stubborn browser caches.
+      // Always redirect to the root with a unique query so the browser must
+      // fetch a fresh HTML document and latest hashed bundles.
+      (function goLatest() {
+        var target = '/?_v=' + Date.now();
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body>
+    Redirecting to the latest version...
+  </body>
+</html>
