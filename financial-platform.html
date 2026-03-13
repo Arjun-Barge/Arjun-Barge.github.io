@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Redirecting...</title>
+    <script>
+      // Backward-compatible entrypoint: old links to /financial-platform.html
+      // now route into the SPA query-param opener.
+      (function () {
+        window.location.replace('/?open=financial-platform&_v=' + Date.now());
+      })();
+    </script>
+  </head>
+  <body>
+    Redirecting to Financial Platform...
+  </body>
+</html>
