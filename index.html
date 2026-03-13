@@ -1,7 +1,8 @@
 <!doctype html><html lang="en"><head><meta charset="UTF-8"/><link rel="icon" type="image/svg+xml" href="/favicon.ico"/><link rel="apple-touch-icon" href="/apple-touch-icon.png"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#0f0f0e"/><title>Arjun Barge | Developer Portfolio</title><meta property="title" content="Arjun Barge | Developer Portfolio"/><meta name="description" content="Passionate developer crafting digital experiences with precision and creativity."/><meta itemprop="name" content="Arjun Barge | Developer Portfolio"/><meta itemprop="description" content="Passionate developer crafting digital experiences with precision and creativity."/><meta itemprop="image" content=""/><meta property="og:title" content="Arjun Barge | Developer Portfolio"/><meta property="og:description" content="Passionate developer crafting digital experiences with precision and creativity."/><meta property="og:image" content=""/><meta property="og:image:secure_url" content=""/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Arjun Barge | Developer Portfolio"/><meta name="twitter:description" content="Passionate developer crafting digital experiences with precision and creativity."/><meta name="twitter:image" content=""/><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/><meta http-equiv="Pragma" content="no-cache"/><meta http-equiv="Expires" content="0"/><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"><style>html{background-color:#0f0f0e}</style><script type="module" crossorigin src="/assets/index-CiH1gE5C.js"></script><link rel="stylesheet" crossorigin href="/assets/index-CK_DqMgs.css"></head><body><div id="root"></div><script>// Aggressive cache-busting bootstrap.
       // 1) Force a unique document URL on every load (handles stale refresh in
       //    Samsung Chrome / Safari variants).
-      // 2) Check /version.json with no-store and force-reload when build changes.
+      // 2) Compare server bundle hash vs current bundle hash.
+      // 3) Check /version.json with no-store and force-reload when build changes.
       (async function ensureLatestVersion() {
         try {
           var LOAD_GUARD = '__doc_refresh_guard';
@@ -22,6 +23,26 @@
             var cleaned = new URL(u.toString());
             cleaned.searchParams.delete('_v');
             window.history.replaceState({}, '', cleaned.toString());
+          }
+
+          // Second phase: detect stale shell by comparing JS bundle hash from
+          // currently loaded HTML vs freshly fetched server HTML.
+          var currentScriptEl = document.querySelector('script[type="module"][src]');
+          var currentSrc = currentScriptEl ? currentScriptEl.getAttribute('src') || '' : '';
+          var currentMatch = currentSrc.match(/assets\/index-[^"']+\.js/);
+          var currentBundle = currentMatch ? currentMatch[0] : '';
+
+          var latestHtmlRes = await fetch('/?__check=' + Date.now(), { cache: 'no-store' });
+          if (latestHtmlRes.ok) {
+            var latestHtml = await latestHtmlRes.text();
+            var latestMatch = latestHtml.match(/assets\/index-[^"']+\.js/);
+            var latestBundle = latestMatch ? latestMatch[0] : '';
+            if (currentBundle && latestBundle && currentBundle !== latestBundle) {
+              var mismatchUrl = new URL(window.location.href);
+              mismatchUrl.searchParams.set('_v', Date.now().toString());
+              window.location.replace(mismatchUrl.toString());
+              return;
+            }
           }
 
           var base = '/';
