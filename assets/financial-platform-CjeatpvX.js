@@ -378,7 +378,7 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 <div id="fp-tooltip" role="tooltip" aria-hidden="true"></div>
 
 <nav class="nav">
-  <div class="nav-brand">ARJUN<span>.</span>AI</div>
+  <div class="nav-brand">Built by Arjun Barge</div>
   <div class="nav-tabs">
     <div class="nav-tab active" onclick="sw('deals')" id="tab-deals" data-tooltip="Core valuation module combining DCF, comps, LBO, and SEC filings." data-tooltip-example="Use when evaluating one public company in depth."><span class="dot"></span>Deal Scanner</div>
     <div class="nav-tab" onclick="sw('crypto')" id="tab-crypto" data-tooltip="Network-driven crypto valuation using Metcalfe and NVT frameworks." data-tooltip-example="Use to compare live crypto price vs intrinsic network-value estimates."><span class="dot"></span>Crypto Valuation</div>
