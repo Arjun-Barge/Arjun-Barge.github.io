@@ -1,4 +1,4 @@
-import{r as c,j as t}from"./react-vendor-Bsy9czSr.js";const y="modulepreload",x=function(i){return"/"+i},f={},b=function(d,o,v){let s=Promise.resolve();if(o&&o.length>0){let u=function(a){return Promise.all(a.map(l=>Promise.resolve(l).then(p=>({status:"fulfilled",value:p}),p=>({status:"rejected",reason:p}))))};document.getElementsByTagName("link");const n=document.querySelector("meta[property=csp-nonce]"),e=n?.nonce||n?.getAttribute("nonce");s=u(o.map(a=>{if(a=x(a),a in f)return;f[a]=!0;const l=a.endsWith(".css"),p=l?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${a}"]${p}`))return;const r=document.createElement("link");if(r.rel=l?"stylesheet":y,l||(r.as="script"),r.crossOrigin="",r.href=a,e&&r.setAttribute("nonce",e),document.head.appendChild(r),l)return new Promise((g,h)=>{r.addEventListener("load",g),r.addEventListener("error",()=>h(new Error(`Unable to preload CSS for ${a}`)))})}))}function m(n){const e=new Event("vite:preloadError",{cancelable:!0});if(e.payload=n,window.dispatchEvent(e),!e.defaultPrevented)throw n}return s.then(n=>{for(const e of n||[])e.status==="rejected"&&m(e.reason);return d().catch(m)})},w=({onClose:i,onOpenGuide:d})=>{const[o,v]=c.useState(null),[s,m]=c.useState(null);return c.useEffect(()=>{let n=!1;return b(()=>Promise.resolve().then(()=>C),void 0).then(e=>{!n&&typeof e.default=="string"&&v(e.default)}).catch(e=>{n||m(e?.message||"Failed to load platform")}),()=>{n=!0}},[]),c.useEffect(()=>(document.body.style.overflow="hidden",()=>{document.body.style.overflow=""}),[]),c.useEffect(()=>{const n=e=>{e.key==="Escape"&&i()};return document.addEventListener("keydown",n),()=>document.removeEventListener("keydown",n)},[i]),c.useEffect(()=>{const n=e=>{e.data?.type==="CLOSE_PLATFORM"&&e.origin===window.location.origin&&i(),e.data?.type==="SCROLL_TO_FINANCIAL_GUIDE"&&d&&d()};return window.addEventListener("message",n),()=>window.removeEventListener("message",n)},[i,d]),t.jsxs("div",{style:{position:"fixed",inset:0,zIndex:9999,background:"radial-gradient(circle at 12% -8%, rgba(201, 169, 98, 0.2), transparent 28%), radial-gradient(circle at 88% 0%, rgba(142, 200, 216, 0.12), transparent 30%), #0a0a0a",display:"flex",flexDirection:"column"},role:"dialog","aria-modal":"true","aria-label":"Financial Intelligence Platform",children:[t.jsx("style",{children:`@keyframes fpPulse {
+import{r as c,j as t}from"./react-vendor-Bsy9czSr.js";const y="modulepreload",x=function(i){return"/"+i},f={},b=function(d,o,v){let s=Promise.resolve();if(o&&o.length>0){let u=function(a){return Promise.all(a.map(l=>Promise.resolve(l).then(p=>({status:"fulfilled",value:p}),p=>({status:"rejected",reason:p}))))};document.getElementsByTagName("link");const n=document.querySelector("meta[property=csp-nonce]"),e=n?.nonce||n?.getAttribute("nonce");s=u(o.map(a=>{if(a=x(a),a in f)return;f[a]=!0;const l=a.endsWith(".css"),p=l?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${a}"]${p}`))return;const r=document.createElement("link");if(r.rel=l?"stylesheet":y,l||(r.as="script"),r.crossOrigin="",r.href=a,e&&r.setAttribute("nonce",e),document.head.appendChild(r),l)return new Promise((g,h)=>{r.addEventListener("load",g),r.addEventListener("error",()=>h(new Error(`Unable to preload CSS for ${a}`)))})}))}function m(n){const e=new Event("vite:preloadError",{cancelable:!0});if(e.payload=n,window.dispatchEvent(e),!e.defaultPrevented)throw n}return s.then(n=>{for(const e of n||[])e.status==="rejected"&&m(e.reason);return d().catch(m)})},w=({onClose:i,onOpenGuide:d})=>{const[o,v]=c.useState(null),[s,m]=c.useState(null);return c.useEffect(()=>{let n=!1;return b(()=>Promise.resolve().then(()=>E),void 0).then(e=>{!n&&typeof e.default=="string"&&v(e.default)}).catch(e=>{n||m(e?.message||"Failed to load platform")}),()=>{n=!0}},[]),c.useEffect(()=>(document.body.style.overflow="hidden",()=>{document.body.style.overflow=""}),[]),c.useEffect(()=>{const n=e=>{e.key==="Escape"&&i()};return document.addEventListener("keydown",n),()=>document.removeEventListener("keydown",n)},[i]),c.useEffect(()=>{const n=e=>{e.data?.type==="CLOSE_PLATFORM"&&e.origin===window.location.origin&&i(),e.data?.type==="SCROLL_TO_FINANCIAL_GUIDE"&&d&&d()};return window.addEventListener("message",n),()=>window.removeEventListener("message",n)},[i,d]),t.jsxs("div",{style:{position:"fixed",inset:0,zIndex:9999,background:"radial-gradient(circle at 12% -8%, rgba(201, 169, 98, 0.2), transparent 28%), radial-gradient(circle at 88% 0%, rgba(142, 200, 216, 0.12), transparent 30%), #0a0a0a",display:"flex",flexDirection:"column"},role:"dialog","aria-modal":"true","aria-label":"Financial Intelligence Platform",children:[t.jsx("style",{children:`@keyframes fpPulse {
             0% { box-shadow: 0 0 0 0 rgba(201, 169, 98, 0.48); }
             70% { box-shadow: 0 0 0 12px rgba(201, 169, 98, 0); }
             100% { box-shadow: 0 0 0 0 rgba(201, 169, 98, 0); }
@@ -49,7 +49,7 @@ import{r as c,j as t}from"./react-vendor-Bsy9czSr.js";const y="modulepreload",x=
             border-radius: 999px;
             background: #c9a962;
             animation: fpPulse 1.8s ease-out infinite;
-          }`}),t.jsxs("div",{style:{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"0.75rem clamp(0.9rem, 2vw, 1.25rem)",borderBottom:"1px solid #2d2d2d",backdropFilter:"blur(10px)",background:"linear-gradient(180deg, rgba(201, 169, 98, 0.08), transparent 55%), rgba(9, 9, 9, 0.92)",flexShrink:0,gap:"0.75rem"},children:[t.jsx("span",{style:{fontFamily:"var(--font-sans)",fontSize:"0.75rem",fontWeight:600,letterSpacing:"0.16em",textTransform:"uppercase",color:"#c9a962",flex:"1",minWidth:0,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"},children:"Financial Intelligence Platform"}),t.jsx("button",{onClick:i,style:{background:"transparent",border:"1px solid #333333",color:"#b0a287",cursor:"pointer",fontSize:"1.125rem",padding:"0.375rem 0.625rem",lineHeight:1,borderRadius:"8px"},"aria-label":"Close",children:"✕"})]}),t.jsxs("div",{style:{flex:1,minHeight:0,position:"relative"},children:[s&&t.jsxs("div",{style:{position:"absolute",inset:0,display:"flex",alignItems:"center",justifyContent:"center",flexDirection:"column",gap:"1rem",color:"#a3a3a3",fontFamily:"var(--font-sans)",fontSize:"0.875rem"},children:[t.jsx("span",{children:s}),t.jsx("button",{type:"button",onClick:i,style:{padding:"0.5rem 1rem",background:"#262626",border:"1px solid #404040",color:"#e5e5e5",cursor:"pointer",borderRadius:"4px"},children:"Close"})]}),!s&&!o&&t.jsx("div",{style:{position:"absolute",inset:0,display:"flex",alignItems:"center",justifyContent:"center"},children:t.jsxs("div",{className:"fp-loading-shell","aria-live":"polite",children:[t.jsx("div",{className:"fp-loading-line"}),t.jsxs("div",{className:"fp-loading-meta",children:[t.jsx("span",{className:"fp-loading-dot"}),t.jsx("span",{children:"Loading financial platform"})]})]})}),!s&&o&&t.jsx("iframe",{srcDoc:o,title:"Financial Intelligence Platform",style:{position:"absolute",inset:0,width:"100%",height:"100%",border:"none",display:"block"},sandbox:"allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"})]})]})},R=Object.freeze(Object.defineProperty({__proto__:null,default:w},Symbol.toStringTag,{value:"Module"})),E=`<!DOCTYPE html>
+          }`}),t.jsxs("div",{style:{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"0.75rem clamp(0.9rem, 2vw, 1.25rem)",borderBottom:"1px solid #2d2d2d",backdropFilter:"blur(10px)",background:"linear-gradient(180deg, rgba(201, 169, 98, 0.08), transparent 55%), rgba(9, 9, 9, 0.92)",flexShrink:0,gap:"0.75rem"},children:[t.jsx("span",{style:{fontFamily:"var(--font-sans)",fontSize:"0.75rem",fontWeight:600,letterSpacing:"0.16em",textTransform:"uppercase",color:"#c9a962",flex:"1",minWidth:0,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"},children:"Financial Intelligence Platform"}),t.jsx("button",{onClick:i,style:{background:"transparent",border:"1px solid #333333",color:"#b0a287",cursor:"pointer",fontSize:"1.125rem",padding:"0.375rem 0.625rem",lineHeight:1,borderRadius:"8px"},"aria-label":"Close",children:"✕"})]}),t.jsxs("div",{style:{flex:1,minHeight:0,position:"relative"},children:[s&&t.jsxs("div",{style:{position:"absolute",inset:0,display:"flex",alignItems:"center",justifyContent:"center",flexDirection:"column",gap:"1rem",color:"#a3a3a3",fontFamily:"var(--font-sans)",fontSize:"0.875rem"},children:[t.jsx("span",{children:s}),t.jsx("button",{type:"button",onClick:i,style:{padding:"0.5rem 1rem",background:"#262626",border:"1px solid #404040",color:"#e5e5e5",cursor:"pointer",borderRadius:"4px"},children:"Close"})]}),!s&&!o&&t.jsx("div",{style:{position:"absolute",inset:0,display:"flex",alignItems:"center",justifyContent:"center"},children:t.jsxs("div",{className:"fp-loading-shell","aria-live":"polite",children:[t.jsx("div",{className:"fp-loading-line"}),t.jsxs("div",{className:"fp-loading-meta",children:[t.jsx("span",{className:"fp-loading-dot"}),t.jsx("span",{children:"Loading financial platform"})]})]})}),!s&&o&&t.jsx("iframe",{srcDoc:o,title:"Financial Intelligence Platform",style:{position:"absolute",inset:0,width:"100%",height:"100%",border:"none",display:"block"},sandbox:"allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"})]})]})},R=Object.freeze(Object.defineProperty({__proto__:null,default:w},Symbol.toStringTag,{value:"Module"})),C=`<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -95,16 +95,17 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 
 /* NAV */
 .nav{position:-webkit-sticky;position:sticky;top:0;z-index:200;background:rgba(9,9,9,.9);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border-bottom:1px solid var(--border2);display:flex;align-items:center;padding:0 clamp(16px,3vw,40px);height:60px;gap:0;box-shadow:0 10px 24px rgba(0,0,0,.3);}
-.nav-brand{font-family:var(--display);font-size:16px;font-weight:700;letter-spacing:2px;color:var(--text);text-transform:uppercase;margin-right:32px;flex-shrink:0;}
+.nav-brand{font-family:var(--display);font-size:17px;font-weight:700;letter-spacing:2px;color:var(--text);text-transform:uppercase;margin-right:clamp(22px,3vw,44px);flex-shrink:0;}
 .nav-brand span{color:var(--accent2);}
 .nav-tabs{display:flex;gap:0;flex:1;overflow-x:auto;}
-.nav-tab{padding:0 18px;height:60px;display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted2);cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap;flex-shrink:0;}
+.nav-tab{padding:0 18px;height:60px;display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted2);cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap;flex-shrink:0;}
 .nav-tab:hover{color:var(--text);}
 .nav-tab.active{color:var(--accent2);border-bottom-color:var(--accent);background:linear-gradient(180deg,transparent,rgba(201,169,98,.06));}
 .nav-tab .dot{width:5px;height:5px;border-radius:50%;background:var(--muted);flex-shrink:0;}
 .nav-tab.active .dot{background:var(--green);animation:blink 2s infinite;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
-.nav-right{margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:1px;flex-shrink:0;padding-left:20px;}
+.nav-right{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--muted2);letter-spacing:1px;flex-shrink:0;padding-left:24px;}
+.nav-back-link{margin-left:clamp(22px,3vw,34px)!important;padding-left:18px!important;}
 
 /* LAYOUT */
 .main{position:relative;z-index:1;}
@@ -115,15 +116,15 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 /* TYPOGRAPHY */
 .pane-title{font-family:var(--display);font-size:clamp(36px,5vw,62px);font-weight:700;line-height:.93;margin-bottom:12px;letter-spacing:-.7px;}
 .pane-title em{color:var(--accent2);font-style:normal;}
-.pane-sub{font-size:13px;color:#beb4a2;font-weight:400;line-height:1.78;max-width:660px;margin-bottom:32px;}
+.pane-sub{font-size:14px;color:#beb4a2;font-weight:400;line-height:1.82;max-width:700px;margin-bottom:32px;}
 .source-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px;}
-.stag{font-family:var(--mono);font-size:9px;letter-spacing:1.5px;border:1px solid var(--border2);padding:3px 10px;color:var(--muted2);text-transform:uppercase;border-radius:2px;}
+.stag{font-family:var(--mono);font-size:10px;letter-spacing:1.2px;border:1px solid var(--border2);padding:4px 10px;color:var(--muted2);text-transform:uppercase;border-radius:3px;}
 .stag.live{border-color:rgba(0,229,160,.3);color:var(--green);}
 .stag.ws{border-color:rgba(34,221,255,.3);color:var(--cyan);}
 .stag.dalio{border-color:rgba(255,204,68,.3);color:var(--yellow);}
 
 /* SECTION HEADER */
-.sh{font-family:var(--display);font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:10px;margin-bottom:18px;}
+.sh{font-family:var(--display);font-size:10px;font-weight:700;letter-spacing:2.6px;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:10px;margin-bottom:18px;}
 .sh::after{content:'';flex:1;height:1px;background:var(--border);}
 
 /* INPUT */
@@ -133,8 +134,8 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 .ig-row:last-child{border-bottom:none;}
 .ig-cell{padding:16px 20px;border-right:1px solid var(--border);min-height:86px;display:flex;flex-direction:column;justify-content:center;}
 .ig-cell:last-child{border-right:none;}
-.ig-label{font-family:var(--mono);font-size:9px;letter-spacing:1.5px;color:var(--muted2);text-transform:uppercase;margin-bottom:7px;}
-.ig-cell input,.ig-cell select{background:transparent;border:none;outline:none;font-family:var(--mono);font-size:13px;color:var(--text);width:100%;}
+.ig-label{font-family:var(--mono);font-size:10px;letter-spacing:1.2px;color:var(--muted2);text-transform:uppercase;margin-bottom:7px;}
+.ig-cell input,.ig-cell select{background:transparent;border:none;outline:none;font-family:var(--mono);font-size:14px;color:var(--text);width:100%;}
 .ig-cell input::placeholder{color:var(--muted);}
 .ig-cell select option{background:#0e0e18;}
 .run-btn{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#14110b;border:none;padding:17px 40px;font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;width:100%;transition:transform .18s ease,filter .18s ease;}
@@ -144,19 +145,19 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 /* METRICS */
 .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:1px;background:var(--border);margin-bottom:36px;border-radius:10px;overflow:hidden;}
 .metric{background:var(--s1);padding:18px 20px;min-height:124px;display:flex;flex-direction:column;justify-content:space-between;}
-.m-lbl{font-family:var(--mono);font-size:9px;letter-spacing:1.5px;color:var(--muted2);text-transform:uppercase;margin-bottom:5px;}
-.m-val{font-family:var(--display);font-size:26px;font-weight:700;line-height:1;}
-.m-sub{font-size:11px;color:var(--muted2);margin-top:3px;}
+.m-lbl{font-family:var(--mono);font-size:10px;letter-spacing:1.2px;color:var(--muted2);text-transform:uppercase;margin-bottom:5px;}
+.m-val{font-family:var(--display);font-size:28px;font-weight:700;line-height:1;}
+.m-sub{font-size:12px;color:var(--muted2);margin-top:3px;}
 .cA{color:var(--accent2);} .cG{color:var(--green);} .cR{color:var(--red);} .cY{color:var(--yellow);} .cC{color:var(--cyan);}
 
 /* PANELS */
 .two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--border);margin-bottom:36px;border-radius:10px;overflow:hidden;align-items:stretch;}
 .three-col{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--border);margin-bottom:36px;border-radius:10px;overflow:hidden;align-items:stretch;}
 .panel{background:var(--s1);padding:24px;height:100%;}
-.panel-row{display:flex;justify-content:space-between;border-bottom:1px solid var(--border);padding:6px 0;font-size:12px;color:var(--muted2);}
+.panel-row{display:flex;justify-content:space-between;border-bottom:1px solid var(--border);padding:7px 0;font-size:13px;color:var(--muted2);}
 .panel-row:last-child{border-bottom:none;}
-.panel-row span{color:var(--text);font-weight:500;font-family:var(--mono);font-size:11px;}
-.panel-title{font-family:var(--mono);font-size:9px;color:var(--accent);letter-spacing:1.6px;margin-bottom:14px;text-transform:uppercase;}
+.panel-row span{color:var(--text);font-weight:500;font-family:var(--mono);font-size:12px;}
+.panel-title{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:1.4px;margin-bottom:14px;text-transform:uppercase;}
 
 /* VERDICT */
 .verdict-wrap{border:1px solid var(--border2);padding:30px;margin-bottom:36px;position:relative;border-radius:10px;background:linear-gradient(180deg,rgba(201,169,98,.04),transparent 48%),var(--s1);box-shadow:var(--shadow-soft);}
@@ -167,19 +168,19 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 .v-hold{border-color:var(--yellow);color:var(--yellow);}
 .v-avoid{border-color:var(--red);color:var(--red);}
 .v-active{border-color:var(--cyan);color:var(--cyan);}
-.verdict-list{font-size:13px;line-height:1.9;color:var(--muted2);list-style:none;padding-top:4px;}
+.verdict-list{font-size:14px;line-height:1.85;color:var(--muted2);list-style:none;padding-top:4px;}
 .verdict-list li{padding-left:16px;position:relative;margin-bottom:4px;}
 .verdict-list li::before{content:'›';position:absolute;left:0;color:var(--accent);}
 
 /* TABLE */
-.data-table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:11px;margin-bottom:36px;table-layout:fixed;}
-.data-table th{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);padding:9px 13px;background:var(--s2);border:1px solid var(--border);text-align:left;font-weight:700;}
+.data-table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:12px;margin-bottom:36px;table-layout:fixed;}
+.data-table th{font-size:9px;letter-spacing:1.8px;text-transform:uppercase;color:var(--accent);padding:9px 13px;background:var(--s2);border:1px solid var(--border);text-align:left;font-weight:700;}
 .data-table td{padding:9px 13px;border:1px solid var(--border);color:var(--muted2);}
 .data-table td.hi{color:var(--text);} .data-table td.up{color:var(--green);} .data-table td.dn{color:var(--red);}
 .data-table tr:hover td{background:var(--s2);}
 
 /* TICKER STRIP */
-.ticker-strip{background:linear-gradient(180deg,rgba(223,200,138,.05),transparent),var(--s2);border:1px solid var(--border2);padding:14px 18px;margin-bottom:28px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;font-family:var(--mono);font-size:12px;border-radius:10px;}
+.ticker-strip{background:linear-gradient(180deg,rgba(223,200,138,.05),transparent),var(--s2);border:1px solid var(--border2);padding:14px 18px;margin-bottom:28px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;font-family:var(--mono);font-size:13px;border-radius:10px;}
 .ti{display:flex;gap:7px;align-items:center;}
 .ti-sym{color:var(--accent2);font-weight:700;letter-spacing:1px;}
 .ti-px{color:var(--text);}
@@ -217,17 +218,17 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 .regime-bar{height:4px;border-radius:2px;margin-bottom:14px;}
 
 /* SEC FEED */
-.filing-row{display:grid;grid-template-columns:minmax(56px,72px) minmax(0,1fr) minmax(96px,110px) minmax(74px,88px);gap:12px;align-items:center;padding:11px 16px;border-bottom:1px solid var(--border);font-size:11px;transition:background .1s;}
+.filing-row{display:grid;grid-template-columns:minmax(56px,72px) minmax(0,1fr) minmax(96px,110px) minmax(74px,88px);gap:12px;align-items:center;padding:11px 16px;border-bottom:1px solid var(--border);font-size:12px;transition:background .1s;}
 .filing-row:hover{background:var(--s2);}
 .f-type{font-family:var(--mono);font-weight:700;letter-spacing:1px;}
 .f-entity{color:var(--muted2);}
 .f-date{font-family:var(--mono);color:var(--muted);}
-.f-link{color:var(--accent2);text-decoration:none;font-family:var(--mono);font-size:10px;}
+.f-link{color:var(--accent2);text-decoration:none;font-family:var(--mono);font-size:11px;}
 .f-link:hover{text-decoration:underline;}
 
 /* FOOTBALL FIELD */
 .ff-row{margin-bottom:12px;}
-.ff-lbl{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;color:var(--muted2);margin-bottom:4px;}
+.ff-lbl{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--muted2);margin-bottom:4px;}
 .ff-lbl strong{color:var(--text);}
 .ff-track{height:22px;background:var(--s2);border:1px solid var(--border);position:relative;overflow:hidden;}
 .ff-fill{position:absolute;top:3px;height:16px;display:flex;align-items:center;padding:0 7px;transition:all .5s;}
@@ -235,7 +236,7 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 
 /* VISUALIZATIONS */
 .viz-wrap{background:var(--s1);border:1px solid var(--border2);padding:20px 24px;margin-bottom:24px;border-radius:10px;box-shadow:var(--shadow-panel);}
-.viz-title{font-family:var(--mono);font-size:9px;letter-spacing:2px;color:var(--accent);text-transform:uppercase;margin-bottom:14px;}
+.viz-title{font-family:var(--mono);font-size:10px;letter-spacing:1.6px;color:var(--accent);text-transform:uppercase;margin-bottom:14px;}
 .viz-fcf{display:flex;align-items:flex-end;gap:8px;height:80px;margin-top:8px;}
 .viz-fcf-bar{flex:1;min-width:0;background:var(--border2);border-radius:2px 2px 0 0;position:relative;transition:height .4s ease;}
 .viz-fcf-bar span{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:8px;color:var(--muted2);white-space:nowrap;margin-bottom:4px;}
@@ -253,8 +254,8 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 .viz-crypto-bar-fill{height:100%;border-radius:3px;max-width:100%;transition:width .3s ease;}
 
 /* SENSITIVITY */
-.sens{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:11px;margin-bottom:36px;}
-.sens th{background:var(--s2);border:1px solid var(--border);padding:8px 11px;font-size:8px;letter-spacing:2px;color:var(--accent);font-weight:700;text-align:center;}
+.sens{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:12px;margin-bottom:36px;}
+.sens th{background:var(--s2);border:1px solid var(--border);padding:8px 11px;font-size:9px;letter-spacing:1.8px;color:var(--accent);font-weight:700;text-align:center;}
 .sens td{border:1px solid var(--border);padding:8px 11px;text-align:center;color:var(--muted2);}
 .sens td.c0{background:rgba(124,108,255,.08);color:var(--accent2);}
 .sens td.hi{color:var(--green);} .sens td.lo{color:var(--red);}
@@ -265,7 +266,7 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 .loading-line{height:2px;background:linear-gradient(90deg,rgba(223,200,138,.08),rgba(223,200,138,.22),rgba(223,200,138,.08));margin-bottom:10px;overflow:hidden;border-radius:999px;position:relative;}
 .loading-line::after{content:'';position:absolute;left:-20%;top:0;height:100%;width:20%;background:linear-gradient(90deg,transparent,var(--accent2),transparent);animation:scan 1.4s cubic-bezier(.16,1,.3,1) infinite;}
 @keyframes scan{to{left:120%;}}
-.loading-msg{font-family:var(--mono);font-size:10px;color:var(--muted2);letter-spacing:1.2px;text-transform:uppercase;display:flex;align-items:center;gap:8px;}
+.loading-msg{font-family:var(--mono);font-size:11px;color:var(--muted2);letter-spacing:1.2px;text-transform:uppercase;display:flex;align-items:center;gap:8px;}
 .loading-msg::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(201,169,98,.45);animation:ping 1.8s ease-out infinite;}
 @keyframes ping{0%{box-shadow:0 0 0 0 rgba(201,169,98,.45);}80%{box-shadow:0 0 0 10px rgba(201,169,98,0);}100%{box-shadow:0 0 0 0 rgba(201,169,98,0);}}
 .err-box{background:rgba(255,68,102,.05);border:1px solid rgba(255,68,102,.2);padding:14px 18px;color:var(--red);font-family:var(--mono);font-size:11px;display:none;margin-bottom:18px;line-height:1.6;}
@@ -273,34 +274,34 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 .notice-box{background:rgba(255,204,68,.04);border:1px solid rgba(255,204,68,.2);padding:12px 18px;color:var(--yellow);font-family:var(--mono);font-size:10px;display:none;margin-bottom:18px;line-height:1.6;}
 .notice-box.show{display:block;}
 .disc{font-size:10px;color:#7f7666;line-height:1.6;border-top:1px solid var(--border);padding-top:18px;margin-top:18px;}
-.help-link{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:9px;letter-spacing:1.5px;color:var(--muted2);text-decoration:none;margin-bottom:14px;cursor:pointer;transition:color .2s;}
+.help-link{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10px;letter-spacing:1.2px;color:var(--muted2);text-decoration:none;margin-bottom:14px;cursor:pointer;transition:color .2s;}
 .help-link:hover{color:var(--accent);}
-.viz-desc{font-size:11px;color:var(--muted2);line-height:1.5;margin-top:4px;margin-bottom:12px;}
+.viz-desc{font-size:12px;color:var(--muted2);line-height:1.6;margin-top:4px;margin-bottom:12px;}
 /* Custom hover tooltips */
 [data-tooltip]{cursor:help;position:relative;}
-#fp-tooltip{position:fixed;z-index:9999;max-width:280px;padding:10px 14px;background:var(--s2);border:1px solid var(--accent);border-radius:4px;font-size:11px;line-height:1.5;color:var(--text);white-space:normal;pointer-events:none;opacity:0;transition:opacity .15s ease;box-shadow:0 4px 20px rgba(0,0,0,.4);}
+#fp-tooltip{position:fixed;z-index:9999;max-width:320px;padding:11px 14px;background:var(--s2);border:1px solid var(--accent);border-radius:6px;font-size:12px;line-height:1.6;color:var(--text);white-space:normal;pointer-events:none;opacity:0;transition:opacity .15s ease;box-shadow:0 6px 24px rgba(0,0,0,.45);}
 #fp-tooltip.show{opacity:1;}
-#fp-tooltip .fp-tt-title{font-family:var(--mono);font-size:9px;letter-spacing:1px;color:var(--accent);margin-bottom:4px;text-transform:uppercase;}
+#fp-tooltip .fp-tt-title{font-family:var(--mono);font-size:10px;letter-spacing:1px;color:var(--accent);margin-bottom:4px;text-transform:uppercase;}
 #fp-tooltip .fp-tt-desc{color:var(--text);}
-#fp-tooltip .fp-tt-example{font-size:10px;color:var(--muted2);margin-top:6px;border-top:1px solid var(--border);padding-top:6px;}
-#fp-tooltip .fp-tt-input{font-size:10px;color:var(--accent);margin-top:4px;}
+#fp-tooltip .fp-tt-example{font-size:11px;color:var(--muted2);margin-top:6px;border-top:1px solid var(--border);padding-top:6px;}
+#fp-tooltip .fp-tt-input{font-size:11px;color:var(--accent);margin-top:4px;}
 
 /* === MOBILE (≤760px) === */
 @media(max-width:760px){
   /* Nav — brand + back link on row 1, scrollable tabs on row 2 */
   .nav{padding:0 12px;height:auto;flex-wrap:wrap;}
-  .nav-brand{height:48px;display:flex;align-items:center;font-size:13px;letter-spacing:2px;margin-right:0;order:0;flex-shrink:0;}
+  .nav-brand{height:48px;display:flex;align-items:center;font-size:14px;letter-spacing:2px;margin-right:0;order:0;flex-shrink:0;}
   .nav-tabs{order:2;width:100%;flex-basis:100%;border-top:1px solid var(--border);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:0;}
   .nav-tabs::-webkit-scrollbar{display:none;}
-  .nav-tab{height:44px;padding:0 12px;font-size:9px;letter-spacing:1px;}
+  .nav-tab{height:44px;padding:0 12px;font-size:10px;letter-spacing:1px;}
   .nav-right{display:none;}
-  .nav-back-link{order:1!important;margin-left:auto!important;height:48px!important;border-left:none!important;padding:0 0 0 12px!important;font-size:9px!important;letter-spacing:1px!important;}
+  .nav-back-link{order:1!important;margin-left:auto!important;height:48px!important;border-left:none!important;padding:0 0 0 12px!important;font-size:10px!important;letter-spacing:1px!important;}
 
   /* Content */
   .tool-pane{padding:18px 14px 80px;}
-  .pane-sub{font-size:12px;margin-bottom:20px;}
+  .pane-sub{font-size:13px;margin-bottom:20px;}
   .source-tags{margin-bottom:20px;}
-  .stag{font-size:8px;padding:2px 8px;}
+  .stag{font-size:9px;padding:2px 8px;}
 
   /* Grid collapses */
   .two-col,.three-col{grid-template-columns:1fr;}
@@ -338,11 +339,11 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
   .panel-row span{text-align:left;}
 
   /* Crypto */
-  .cc-px{font-size:20px;}
+  .cc-px{font-size:22px;}
   .cc{padding:16px;}
 
   /* Run button */
-  .run-btn{padding:15px;font-size:12px;letter-spacing:2px;}
+  .run-btn{padding:15px;font-size:12px;letter-spacing:1.6px;}
 
   /* Touch — instant tap response, no ghost tap highlight */
   button,.nav-tab{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
@@ -363,7 +364,7 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
   .m-val{font-size:18px;}
   .metric{padding:12px;}
   .tool-pane{padding:18px 14px 80px;}
-  .nav-brand{font-size:12px;}
+  .nav-brand{font-size:13px;}
   .crypto-grid{grid-template-columns:1fr;}
 }
 
@@ -379,10 +380,10 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 <nav class="nav">
   <div class="nav-brand">ARJUN<span>.</span>AI</div>
   <div class="nav-tabs">
-    <div class="nav-tab active" onclick="sw('deals')" id="tab-deals"><span class="dot"></span>Deal Scanner</div>
-    <div class="nav-tab" onclick="sw('crypto')" id="tab-crypto"><span class="dot"></span>Crypto Valuation</div>
-    <div class="nav-tab" onclick="sw('macro')" id="tab-macro"><span class="dot"></span>Macro + Dalio</div>
-    <div class="nav-tab" onclick="sw('screen')" id="tab-screen"><span class="dot"></span>Live SEC Feed</div>
+    <div class="nav-tab active" onclick="sw('deals')" id="tab-deals" data-tooltip="Core valuation module combining DCF, comps, LBO, and SEC filings." data-tooltip-example="Use when evaluating one public company in depth."><span class="dot"></span>Deal Scanner</div>
+    <div class="nav-tab" onclick="sw('crypto')" id="tab-crypto" data-tooltip="Network-driven crypto valuation using Metcalfe and NVT frameworks." data-tooltip-example="Use to compare live crypto price vs intrinsic network-value estimates."><span class="dot"></span>Crypto Valuation</div>
+    <div class="nav-tab" onclick="sw('macro')" id="tab-macro" data-tooltip="Macro regime dashboard based on FRED, indices, and Dalio's All Weather logic." data-tooltip-example="Use to sanity-check if valuation assumptions fit the current economic cycle."><span class="dot"></span>Macro + Dalio</div>
+    <div class="nav-tab" onclick="sw('screen')" id="tab-screen" data-tooltip="Event scanner for SEC filings (8-K, 13D/G, S-4, DEFM14A)." data-tooltip-example="Use to detect deal signals and material updates quickly."><span class="dot"></span>Live SEC Feed</div>
   </div>
   <div class="nav-right" id="clock">—</div>
   <button class="nav-back-link" onclick="if(window.parent!==window){try{window.parent.postMessage({type:'CLOSE_PLATFORM'},window.location.origin||'*');}catch(_){window.parent.postMessage({type:'CLOSE_PLATFORM'},'*');}}else{window.history.back();}" style="margin-left:20px;font-family:var(--mono);font-size:10px;letter-spacing:1.5px;color:var(--muted2);background:none;text-decoration:none;white-space:nowrap;padding:0 12px;display:flex;align-items:center;gap:6px;height:58px;border:none;border-left:1px solid var(--border);transition:color .2s;cursor:pointer;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted2)'">← PORTFOLIO</button>
@@ -396,10 +397,10 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
   <p class="pane-sub">Enter a public company ticker — fetches live financials from SEC EDGAR XBRL, then runs a full DCF, EV/EBITDA comps, LBO screen, and Damodaran EV/Sales model.</p>
   <button type="button" class="help-link" onclick="openGuide()" aria-label="Open how to use guide">? How to use this tool →</button>
   <div class="source-tags">
-    <div class="stag live">SEC EDGAR XBRL API</div>
-    <div class="stag live">SEC COMPANY TICKERS</div>
-    <div class="stag">ROSENBAUM & PEARL CH.1–5</div>
-    <div class="stag">DAMODARAN CH.11–12, 17–20</div>
+    <div class="stag live" data-tooltip="SEC XBRL endpoint for standardized financial statement tags." data-tooltip-example="Revenue, EBITDA components, debt, and shares are parsed from companyfacts JSON.">SEC EDGAR XBRL API</div>
+    <div class="stag live" data-tooltip="Official SEC ticker-to-CIK mapping used to resolve company identity." data-tooltip-example="AAPL -> CIK 0000320193.">SEC COMPANY TICKERS</div>
+    <div class="stag" data-tooltip="Investment Banking methodology reference." data-tooltip-example="Comps, precedent logic, and deal process terminology.">ROSENBAUM & PEARL CH.1–5</div>
+    <div class="stag" data-tooltip="Corporate valuation methodology reference by Aswath Damodaran." data-tooltip-example="CAPM, WACC, terminal value, and EV/Sales context.">DAMODARAN CH.11–12, 17–20</div>
   </div>
 
   <div class="input-card">
@@ -477,7 +478,7 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
     <div class="stag">METCALFE'S LAW · NVT RATIO</div>
   </div>
 
-  <div class="sh">Live Prices <span style="font-weight:300;font-family:var(--body);color:var(--muted2);font-size:9px;letter-spacing:0;text-transform:none">— WebSocket stream · auto-updates</span></div>
+  <div class="sh" data-tooltip="Live crypto market feed for major assets. Data auto-refreshes via stream with REST fallback." data-tooltip-example="If stream fails, fallback still gives latest available prices.">Live Prices <span style="font-weight:300;font-family:var(--body);color:var(--muted2);font-size:10px;letter-spacing:0;text-transform:none">— WebSocket stream · auto-updates</span></div>
   <p class="viz-desc" style="margin-bottom:14px">Price in USD and 24-hour change; the bar under each card shows how much it moved (green = up, red = down).</p>
   <div class="crypto-grid" id="crypto-grid">
     <div class="cc" id="cc-BTC"><div class="cc-sym">BTC</div><div class="cc-px cA">Connecting…</div></div>
@@ -488,7 +489,7 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
     <div class="cc" id="cc-ADA"><div class="cc-sym">ADA</div><div class="cc-px cA">—</div></div>
   </div>
 
-  <div class="sh">Intrinsic Valuation Inputs</div>
+  <div class="sh" data-tooltip="Inputs for intrinsic crypto valuation models." data-tooltip-example="Metcalfe uses network size, NVT uses transaction throughput.">Intrinsic Valuation Inputs</div>
   <div class="input-card">
     <div class="ig-row" style="grid-template-columns:1fr 1fr 1fr">
       <div class="ig-cell"><div class="ig-label" data-tooltip="Cryptocurrency to run the network-valuation model on. Uses Metcalfe-style and NVT inputs." data-tooltip-example="Real life: BTC and ETH have the most on-chain data; SOL for a higher-growth network." data-tooltip-input="Choose: BTC, ETH, or SOL">Asset</div>
@@ -506,7 +507,7 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
   </div>
 
   <div id="c-results" style="display:none">
-    <div class="sh">Valuation Output</div>
+    <div class="sh" data-tooltip="Computed fair-value estimates and signal summary from selected crypto inputs." data-tooltip-example="Compare Live Price vs Blended Fair to judge potential over/undervaluation.">Valuation Output</div>
     <div class="metrics" id="c-metrics"></div>
     <div class="two-col" id="c-panels"></div>
     <div class="verdict-wrap" data-label="CRYPTO SIGNAL">
@@ -528,7 +529,7 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
     <div class="stag">DAMODARAN CH.7 — ERP</div>
   </div>
 
-  <button class="run-btn" style="margin-bottom:36px;max-width:300px" id="m-btn" onclick="runMacro()">▶ FETCH LIVE MACRO DATA</button>
+  <button class="run-btn" style="margin-bottom:36px;max-width:340px" id="m-btn" onclick="runMacro()">▶ FETCH LIVE MACRO DATA</button>
 
   <div class="loading-wrap" id="m-load"><div class="loading-line"></div><div class="loading-msg" id="m-log">Fetching…</div></div>
   <div class="notice-box" id="m-notice"></div>
@@ -627,7 +628,7 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
       <div class="viz-filings-day" id="sc-viz-days-bars"></div>
     </div>
     <div style="border:1px solid var(--border);margin-bottom:36px">
-      <div class="sc-header" style="display:grid;grid-template-columns:72px 1fr 110px 88px;gap:12px;padding:9px 16px;background:var(--s2);border-bottom:1px solid var(--border);font-family:var(--mono);font-size:8px;letter-spacing:2px;color:var(--accent)">
+      <div class="sc-header" style="display:grid;grid-template-columns:72px 1fr 110px 88px;gap:12px;padding:9px 16px;background:var(--s2);border-bottom:1px solid var(--border);font-family:var(--mono);font-size:9px;letter-spacing:1.6px;color:var(--accent)">
         <span data-tooltip="SEC form type (e.g. 8-K, S-4, SC 13D)." data-tooltip-example="Real life: 8-K = current report; S-4 = merger.">TYPE</span><span data-tooltip="Company or entity that filed the document." data-tooltip-example="Real life: Issuer name from EDGAR.">COMPANY</span><span data-tooltip="Date the filing was submitted to the SEC." data-tooltip-example="Real life: YYYY-MM-DD format.">FILED</span><span data-tooltip="Link to view the filing on SEC EDGAR." data-tooltip-example="Real life: Opens sec.gov in a new tab.">LINK</span>
       </div>
       <div id="sc-list"></div>
@@ -1808,4 +1809,4 @@ document.addEventListener('DOMContentLoaded',()=>{
 });
 <\/script>
 </body>
-</html>`,C=Object.freeze(Object.defineProperty({__proto__:null,default:E},Symbol.toStringTag,{value:"Module"}));export{b as _,R as i};
+</html>`,E=Object.freeze(Object.defineProperty({__proto__:null,default:C},Symbol.toStringTag,{value:"Module"}));export{b as _,R as i};
