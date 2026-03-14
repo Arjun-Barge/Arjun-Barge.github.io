@@ -1,4 +1,4 @@
-import{r as c,j as t}from"./react-vendor-Bsy9czSr.js";const y="modulepreload",x=function(i){return"/"+i},f={},b=function(d,o,v){let s=Promise.resolve();if(o&&o.length>0){let u=function(a){return Promise.all(a.map(l=>Promise.resolve(l).then(p=>({status:"fulfilled",value:p}),p=>({status:"rejected",reason:p}))))};document.getElementsByTagName("link");const n=document.querySelector("meta[property=csp-nonce]"),e=n?.nonce||n?.getAttribute("nonce");s=u(o.map(a=>{if(a=x(a),a in f)return;f[a]=!0;const l=a.endsWith(".css"),p=l?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${a}"]${p}`))return;const r=document.createElement("link");if(r.rel=l?"stylesheet":y,l||(r.as="script"),r.crossOrigin="",r.href=a,e&&r.setAttribute("nonce",e),document.head.appendChild(r),l)return new Promise((g,h)=>{r.addEventListener("load",g),r.addEventListener("error",()=>h(new Error(`Unable to preload CSS for ${a}`)))})}))}function m(n){const e=new Event("vite:preloadError",{cancelable:!0});if(e.payload=n,window.dispatchEvent(e),!e.defaultPrevented)throw n}return s.then(n=>{for(const e of n||[])e.status==="rejected"&&m(e.reason);return d().catch(m)})},w=({onClose:i,onOpenGuide:d})=>{const[o,v]=c.useState(null),[s,m]=c.useState(null);return c.useEffect(()=>{let n=!1;return b(()=>Promise.resolve().then(()=>E),void 0).then(e=>{!n&&typeof e.default=="string"&&v(e.default)}).catch(e=>{n||m(e?.message||"Failed to load platform")}),()=>{n=!0}},[]),c.useEffect(()=>(document.body.style.overflow="hidden",()=>{document.body.style.overflow=""}),[]),c.useEffect(()=>{const n=e=>{e.key==="Escape"&&i()};return document.addEventListener("keydown",n),()=>document.removeEventListener("keydown",n)},[i]),c.useEffect(()=>{const n=e=>{e.data?.type==="CLOSE_PLATFORM"&&e.origin===window.location.origin&&i(),e.data?.type==="SCROLL_TO_FINANCIAL_GUIDE"&&d&&d()};return window.addEventListener("message",n),()=>window.removeEventListener("message",n)},[i,d]),t.jsxs("div",{style:{position:"fixed",inset:0,zIndex:9999,background:"radial-gradient(circle at 12% -8%, rgba(201, 169, 98, 0.2), transparent 28%), radial-gradient(circle at 88% 0%, rgba(142, 200, 216, 0.12), transparent 30%), #0a0a0a",display:"flex",flexDirection:"column"},role:"dialog","aria-modal":"true","aria-label":"Financial Intelligence Platform",children:[t.jsx("style",{children:`@keyframes fpPulse {
+import{r as s,j as n}from"./react-vendor-Bsy9czSr.js";const y="modulepreload",x=function(i){return"/"+i},u={},b=function(p,l,m){let f=Promise.resolve();if(l&&l.length>0){let t=function(e){return Promise.all(e.map(c=>Promise.resolve(c).then(v=>({status:"fulfilled",value:v}),v=>({status:"rejected",reason:v}))))};document.getElementsByTagName("link");const r=document.querySelector("meta[property=csp-nonce]"),a=r?.nonce||r?.getAttribute("nonce");f=t(l.map(e=>{if(e=x(e),e in u)return;u[e]=!0;const c=e.endsWith(".css"),v=c?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${e}"]${v}`))return;const o=document.createElement("link");if(o.rel=c?"stylesheet":y,c||(o.as="script"),o.crossOrigin="",o.href=e,a&&o.setAttribute("nonce",a),document.head.appendChild(o),c)return new Promise((g,h)=>{o.addEventListener("load",g),o.addEventListener("error",()=>h(new Error(`Unable to preload CSS for ${e}`)))})}))}function d(r){const a=new Event("vite:preloadError",{cancelable:!0});if(a.payload=r,window.dispatchEvent(a),!a.defaultPrevented)throw r}return f.then(r=>{for(const a of r||[])a.status==="rejected"&&d(a.reason);return p().catch(d)})},w=({onClose:i,onOpenGuide:p,selectedHue:l="noir"})=>{const[m,f]=s.useState(null),[d,r]=s.useState(null),a=s.useRef(null);return s.useEffect(()=>{let t=!1;return b(()=>Promise.resolve().then(()=>C),void 0).then(e=>{!t&&typeof e.default=="string"&&f(e.default)}).catch(e=>{t||r(e?.message||"Failed to load platform")}),()=>{t=!0}},[]),s.useEffect(()=>(document.body.style.overflow="hidden",()=>{document.body.style.overflow=""}),[]),s.useEffect(()=>{const t=e=>{e.key==="Escape"&&i()};return document.addEventListener("keydown",t),()=>document.removeEventListener("keydown",t)},[i]),s.useEffect(()=>{const t=e=>{e.data?.type==="CLOSE_PLATFORM"&&e.origin===window.location.origin&&i(),e.data?.type==="SCROLL_TO_FINANCIAL_GUIDE"&&p&&p()};return window.addEventListener("message",t),()=>window.removeEventListener("message",t)},[i,p]),s.useEffect(()=>{const t=a.current?.contentWindow;t&&t.postMessage({type:"SET_HUE",hue:l},"*")},[l,m]),n.jsxs("div",{style:{position:"fixed",inset:0,zIndex:9999,background:"radial-gradient(circle at 12% -8%, rgba(201, 169, 98, 0.2), transparent 28%), radial-gradient(circle at 88% 0%, rgba(142, 200, 216, 0.12), transparent 30%), #0a0a0a",display:"flex",flexDirection:"column"},role:"dialog","aria-modal":"true","aria-label":"Financial Intelligence Platform",children:[n.jsx("style",{children:`@keyframes fpPulse {
             0% { box-shadow: 0 0 0 0 rgba(201, 169, 98, 0.48); }
             70% { box-shadow: 0 0 0 12px rgba(201, 169, 98, 0); }
             100% { box-shadow: 0 0 0 0 rgba(201, 169, 98, 0); }
@@ -49,7 +49,7 @@ import{r as c,j as t}from"./react-vendor-Bsy9czSr.js";const y="modulepreload",x=
             border-radius: 999px;
             background: #c9a962;
             animation: fpPulse 1.8s ease-out infinite;
-          }`}),t.jsxs("div",{style:{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"0.75rem clamp(0.9rem, 2vw, 1.25rem)",borderBottom:"1px solid #2d2d2d",backdropFilter:"blur(10px)",background:"linear-gradient(180deg, rgba(201, 169, 98, 0.08), transparent 55%), rgba(9, 9, 9, 0.92)",flexShrink:0,gap:"0.75rem"},children:[t.jsx("span",{style:{fontFamily:"var(--font-sans)",fontSize:"0.75rem",fontWeight:600,letterSpacing:"0.16em",textTransform:"uppercase",color:"#c9a962",flex:"1",minWidth:0,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"},children:"Financial Intelligence Platform"}),t.jsx("button",{onClick:i,style:{background:"transparent",border:"1px solid #333333",color:"#b0a287",cursor:"pointer",fontSize:"1.125rem",padding:"0.375rem 0.625rem",lineHeight:1,borderRadius:"8px"},"aria-label":"Close",children:"✕"})]}),t.jsxs("div",{style:{flex:1,minHeight:0,position:"relative"},children:[s&&t.jsxs("div",{style:{position:"absolute",inset:0,display:"flex",alignItems:"center",justifyContent:"center",flexDirection:"column",gap:"1rem",color:"#a3a3a3",fontFamily:"var(--font-sans)",fontSize:"0.875rem"},children:[t.jsx("span",{children:s}),t.jsx("button",{type:"button",onClick:i,style:{padding:"0.5rem 1rem",background:"#262626",border:"1px solid #404040",color:"#e5e5e5",cursor:"pointer",borderRadius:"4px"},children:"Close"})]}),!s&&!o&&t.jsx("div",{style:{position:"absolute",inset:0,display:"flex",alignItems:"center",justifyContent:"center"},children:t.jsxs("div",{className:"fp-loading-shell","aria-live":"polite",children:[t.jsx("div",{className:"fp-loading-line"}),t.jsxs("div",{className:"fp-loading-meta",children:[t.jsx("span",{className:"fp-loading-dot"}),t.jsx("span",{children:"Loading financial platform"})]})]})}),!s&&o&&t.jsx("iframe",{srcDoc:o,title:"Financial Intelligence Platform",style:{position:"absolute",inset:0,width:"100%",height:"100%",border:"none",display:"block"},sandbox:"allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"})]})]})},R=Object.freeze(Object.defineProperty({__proto__:null,default:w},Symbol.toStringTag,{value:"Module"})),C=`<!DOCTYPE html>
+          }`}),n.jsxs("div",{style:{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"0.75rem clamp(0.9rem, 2vw, 1.25rem)",borderBottom:"1px solid #2d2d2d",backdropFilter:"blur(10px)",background:"linear-gradient(180deg, rgba(201, 169, 98, 0.08), transparent 55%), rgba(9, 9, 9, 0.92)",flexShrink:0,gap:"0.75rem"},children:[n.jsx("span",{style:{fontFamily:"var(--font-sans)",fontSize:"0.75rem",fontWeight:600,letterSpacing:"0.16em",textTransform:"uppercase",color:"#c9a962",flex:"1",minWidth:0,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"},children:"Financial Intelligence Platform"}),n.jsx("button",{onClick:i,style:{background:"transparent",border:"1px solid #333333",color:"#b0a287",cursor:"pointer",fontSize:"1.125rem",padding:"0.375rem 0.625rem",lineHeight:1,borderRadius:"8px"},"aria-label":"Close",children:"✕"})]}),n.jsxs("div",{style:{flex:1,minHeight:0,position:"relative"},children:[d&&n.jsxs("div",{style:{position:"absolute",inset:0,display:"flex",alignItems:"center",justifyContent:"center",flexDirection:"column",gap:"1rem",color:"#a3a3a3",fontFamily:"var(--font-sans)",fontSize:"0.875rem"},children:[n.jsx("span",{children:d}),n.jsx("button",{type:"button",onClick:i,style:{padding:"0.5rem 1rem",background:"#262626",border:"1px solid #404040",color:"#e5e5e5",cursor:"pointer",borderRadius:"4px"},children:"Close"})]}),!d&&!m&&n.jsx("div",{style:{position:"absolute",inset:0,display:"flex",alignItems:"center",justifyContent:"center"},children:n.jsxs("div",{className:"fp-loading-shell","aria-live":"polite",children:[n.jsx("div",{className:"fp-loading-line"}),n.jsxs("div",{className:"fp-loading-meta",children:[n.jsx("span",{className:"fp-loading-dot"}),n.jsx("span",{children:"Loading financial platform"})]})]})}),!d&&m&&n.jsx("iframe",{ref:a,srcDoc:m,title:"Financial Intelligence Platform",style:{position:"absolute",inset:0,width:"100%",height:"100%",border:"none",display:"block"},sandbox:"allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox",onLoad:()=>{a.current?.contentWindow?.postMessage({type:"SET_HUE",hue:l},"*")}})]})]})},R=Object.freeze(Object.defineProperty({__proto__:null,default:w},Symbol.toStringTag,{value:"Module"})),E=`<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -87,6 +87,63 @@ import{r as c,j as t}from"./react-vendor-Bsy9czSr.js";const y="modulepreload",x=
   --body:'Inter',sans-serif;
   --shadow-soft:0 20px 45px rgba(0,0,0,.32);
   --shadow-panel:0 16px 32px rgba(0,0,0,.25);
+}
+
+:root[data-hue='midnight'] {
+  --bg:#090d16;
+  --s1:#10192b;
+  --s2:#152136;
+  --surface:#1a2943;
+  --border:#243250;
+  --border2:#30446c;
+  --text:#f2f7ff;
+  --muted:#2e3f63;
+  --muted2:#9ab1db;
+  --accent:#7ea8ff;
+  --accent2:#a9c3ff;
+  --green:#6ec8b2;
+  --red:#e1827f;
+  --yellow:#e6cd8d;
+  --cyan:#8fc5eb;
+  --orange:#d9a372;
+}
+
+:root[data-hue='emerald'] {
+  --bg:#09140f;
+  --s1:#102119;
+  --s2:#163026;
+  --surface:#1d3a30;
+  --border:#244438;
+  --border2:#345d4f;
+  --text:#f2fff8;
+  --muted:#29453a;
+  --muted2:#8fbda9;
+  --accent:#74c6a5;
+  --accent2:#9ee2c5;
+  --green:#79dcb7;
+  --red:#dd8c80;
+  --yellow:#dfcd8f;
+  --cyan:#87cfc4;
+  --orange:#d3a06d;
+}
+
+:root[data-hue='daylight'] {
+  --bg:#f6f2e8;
+  --s1:#fffdfa;
+  --s2:#efe7d8;
+  --surface:#f4ebdc;
+  --border:#d8cab0;
+  --border2:#ccb892;
+  --text:#201a12;
+  --muted:#bcae94;
+  --muted2:#6f5f4a;
+  --accent:#a67b36;
+  --accent2:#bf9553;
+  --green:#328f6b;
+  --red:#b85d4f;
+  --yellow:#ad893d;
+  --cyan:#3d839b;
+  --orange:#b37a38;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -658,6 +715,29 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 </div>
 
 <script>
+
+const HUE_STORAGE_KEY = 'arjun-site-hue';
+const HUE_OPTIONS = new Set(['noir', 'midnight', 'emerald', 'daylight']);
+
+function applyHue(nextHue) {
+  const hue = HUE_OPTIONS.has(nextHue) ? nextHue : 'noir';
+  document.documentElement.setAttribute('data-hue', hue);
+}
+
+try {
+  applyHue(localStorage.getItem(HUE_STORAGE_KEY) || 'noir');
+} catch (e) {
+  applyHue('noir');
+}
+
+window.addEventListener('message', (event) => {
+  if (event.data?.type === 'SET_HUE' && typeof event.data.hue === 'string') {
+    applyHue(event.data.hue);
+    try {
+      localStorage.setItem(HUE_STORAGE_KEY, event.data.hue);
+    } catch (e) {}
+  }
+});
 
 function sw(id){
   document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
@@ -1809,4 +1889,4 @@ document.addEventListener('DOMContentLoaded',()=>{
 });
 <\/script>
 </body>
-</html>`,E=Object.freeze(Object.defineProperty({__proto__:null,default:C},Symbol.toStringTag,{value:"Module"}));export{b as _,R as i};
+</html>`,C=Object.freeze(Object.defineProperty({__proto__:null,default:E},Symbol.toStringTag,{value:"Module"}));export{b as _,R as i};

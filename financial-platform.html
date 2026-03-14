@@ -37,6 +37,63 @@
   --shadow-soft:0 20px 45px rgba(0,0,0,.32);
   --shadow-panel:0 16px 32px rgba(0,0,0,.25);
 }
+
+:root[data-hue='midnight'] {
+  --bg:#090d16;
+  --s1:#10192b;
+  --s2:#152136;
+  --surface:#1a2943;
+  --border:#243250;
+  --border2:#30446c;
+  --text:#f2f7ff;
+  --muted:#2e3f63;
+  --muted2:#9ab1db;
+  --accent:#7ea8ff;
+  --accent2:#a9c3ff;
+  --green:#6ec8b2;
+  --red:#e1827f;
+  --yellow:#e6cd8d;
+  --cyan:#8fc5eb;
+  --orange:#d9a372;
+}
+
+:root[data-hue='emerald'] {
+  --bg:#09140f;
+  --s1:#102119;
+  --s2:#163026;
+  --surface:#1d3a30;
+  --border:#244438;
+  --border2:#345d4f;
+  --text:#f2fff8;
+  --muted:#29453a;
+  --muted2:#8fbda9;
+  --accent:#74c6a5;
+  --accent2:#9ee2c5;
+  --green:#79dcb7;
+  --red:#dd8c80;
+  --yellow:#dfcd8f;
+  --cyan:#87cfc4;
+  --orange:#d3a06d;
+}
+
+:root[data-hue='daylight'] {
+  --bg:#f6f2e8;
+  --s1:#fffdfa;
+  --s2:#efe7d8;
+  --surface:#f4ebdc;
+  --border:#d8cab0;
+  --border2:#ccb892;
+  --text:#201a12;
+  --muted:#bcae94;
+  --muted2:#6f5f4a;
+  --accent:#a67b36;
+  --accent2:#bf9553;
+  --green:#328f6b;
+  --red:#b85d4f;
+  --yellow:#ad893d;
+  --cyan:#3d839b;
+  --orange:#b37a38;
+}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{background:radial-gradient(circle at 20% -10%, rgba(201,169,98,.13), transparent 32%),radial-gradient(circle at 82% 0%, rgba(142,200,216,.08), transparent 34%),var(--bg);color:var(--text);font-family:var(--body);min-height:100vh;overflow-x:hidden;}
@@ -607,6 +664,29 @@ body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(
 </div>
 
 <script>
+
+const HUE_STORAGE_KEY = 'arjun-site-hue';
+const HUE_OPTIONS = new Set(['noir', 'midnight', 'emerald', 'daylight']);
+
+function applyHue(nextHue) {
+  const hue = HUE_OPTIONS.has(nextHue) ? nextHue : 'noir';
+  document.documentElement.setAttribute('data-hue', hue);
+}
+
+try {
+  applyHue(localStorage.getItem(HUE_STORAGE_KEY) || 'noir');
+} catch (e) {
+  applyHue('noir');
+}
+
+window.addEventListener('message', (event) => {
+  if (event.data?.type === 'SET_HUE' && typeof event.data.hue === 'string') {
+    applyHue(event.data.hue);
+    try {
+      localStorage.setItem(HUE_STORAGE_KEY, event.data.hue);
+    } catch (e) {}
+  }
+});
 
 function sw(id){
   document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
