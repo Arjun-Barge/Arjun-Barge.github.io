@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoorDash Mission-First Home | Case Study</title>
+    <meta
+      name="description"
+      content="Case study: DoorDash Mission-First Home prototype built to orchestrate hosting missions with one curated multi-merchant cart."
+    />
+    <style>
+      :root {
+        --bg: #0b0b0d;
+        --panel: #121216;
+        --muted: #acacb5;
+        --text: #f4f4f6;
+        --accent: #ff3008;
+        --border: #2a2b31;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: radial-gradient(circle at 10% -10%, #2a140f 0%, transparent 35%), var(--bg);
+        color: var(--text);
+        line-height: 1.65;
+      }
+      .wrap { max-width: 1000px; margin: 0 auto; padding: 40px 20px 72px; }
+      .kicker {
+        color: #ffb2a3;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      h1 { font-size: clamp(30px, 5vw, 56px); margin: 12px 0 16px; line-height: 1.08; }
+      .lead { font-size: clamp(16px, 2.4vw, 20px); color: #dddde6; max-width: 800px; }
+      .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 36px; }
+      .btn {
+        display: inline-flex; align-items: center; justify-content: center;
+        padding: 12px 16px; border-radius: 10px; font-weight: 700;
+        text-decoration: none; border: 1px solid var(--border); color: var(--text); background: var(--panel);
+      }
+      .btn.primary { background: linear-gradient(180deg, #ff4b28, #df2500); border-color: #ff6544; }
+      .grid { display: grid; gap: 16px; grid-template-columns: repeat(12, 1fr); margin: 10px 0 34px; }
+      .card {
+        grid-column: span 12;
+        background: linear-gradient(180deg, rgba(255, 48, 8, 0.07), transparent 35%), var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 18px;
+      }
+      @media (min-width: 900px) { .card.span-6 { grid-column: span 6; } }
+      h2 { margin: 36px 0 12px; font-size: 28px; }
+      h3 { margin: 0 0 10px; font-size: 18px; }
+      p { margin: 0 0 12px; color: #dfdfe7; }
+      ul { margin: 0; padding-left: 18px; color: #dfdfe7; }
+      li { margin-bottom: 8px; }
+      .muted { color: var(--muted); }
+      .embed {
+        width: 100%; min-height: 70vh; border: 1px solid var(--border);
+        border-radius: 12px; overflow: hidden; background: #fff;
+      }
+      iframe { width: 100%; height: 70vh; border: none; }
+      .foot { margin-top: 42px; color: var(--muted); font-size: 14px; }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <div class="kicker">MBAi 420 · Product Case Study</div>
+      <h1>DoorDash Mission-First Home</h1>
+      <p class="lead">
+        A prototype that reframes DoorDash from a storefront browser into a mission orchestrator.
+        Instead of asking hosts to stitch together five apps and five carts, it captures mission intent up front and assembles one curated multi-merchant checkout.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="/doordash-missions/" target="_blank" rel="noopener noreferrer">Launch Interactive Prototype</a>
+        <a class="btn" href="#presentation">Jump to Embedded Presentation</a>
+        <a class="btn" href="#product-spec">Jump to Embedded Product Spec</a>
+      </div>
+
+      <section class="grid">
+        <article class="card span-6">
+          <h3>The user story</h3>
+          <p>Maya wants to host Galentine's. What should be joyful becomes logistics fatigue: wine in one app, flowers in another, substitutions somewhere else, and checkout fragmentation everywhere.</p>
+        </article>
+        <article class="card span-6">
+          <h3>The product bet</h3>
+          <p>Mission intent should be a first-class input. Order data tells what users buy; mission data tells why. That why-signal powers better orchestration and repeat trust.</p>
+        </article>
+      </section>
+
+      <h2>What we built in the MVE</h2>
+      <p>
+        The MVP starts at the home screen with mission chips (Dinner, Brunch, Game Day, Cocktail Night, Casual Gathering).
+        Users select mission type, confirm guest count and date, then review a curated multi-merchant cart that supports fast edits and a single checkout path.
+      </p>
+      <ul>
+        <li>Mission-first entry point above the standard store grid (non-blocking and skippable).</li>
+        <li>Rules-based template assembly (ops-authored), not ML or concierge.</li>
+        <li>Inline substitution and fee transparency before checkout confirmation.</li>
+        <li>Structured analytics events for declaration, completion, abandonment, and repeat mission behavior.</li>
+      </ul>
+
+      <h2>Why this matters</h2>
+      <p>
+        This is not just a UI tweak; it is a platform positioning shift. The feature is designed as the intake layer for Mission Intelligence:
+        without mission declaration, downstream systems (templates, cart quality learning, mission memory) have no reliable signal to optimize.
+      </p>
+      <div class="grid">
+        <article class="card span-6">
+          <h3>Primary metric</h3>
+          <p><strong>Mission declaration rate</strong> among hosting-eligible users.</p>
+          <p class="muted">The earliest product-controlled funnel lever and the leading indicator for everything else.</p>
+        </article>
+        <article class="card span-6">
+          <h3>Business expectation</h3>
+          <p>Scenario modeling from the team deck estimates meaningful incremental GOV and retention upside as declaration and repeat behavior scale.</p>
+          <p class="muted">Framed as ranges, not single-point promises.</p>
+        </article>
+      </div>
+
+      <h2 id="presentation">Presentation</h2>
+      <p class="muted">
+        Embedded directly on the page (no download required).
+      </p>
+      <div class="embed">
+        <iframe
+          src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Farjun-barge.github.io%2Fassets%2Fdoordash%2FTPM_DoorDash_Galentines_v2.pptx"
+          title="DoorDash Mission-First Home presentation"
+        ></iframe>
+      </div>
+
+      <h2 id="product-spec">Product spec</h2>
+      <p class="muted">Embedded project document with scope, acceptance criteria, UX guidelines, and implementation details.</p>
+      <div class="embed">
+        <iframe src="/assets/doordash/TPM Week 7 Doc.pdf#toolbar=1&navpanes=0&view=FitH" title="DoorDash Mission-First Home document"></iframe>
+      </div>
+
+      <p class="foot">
+        Built from: team presentation + week-7 product document. Prototype hosted as a static export for fast portfolio delivery and reliable demo behavior.
+      </p>
+    </main>
+  </body>
+</html>

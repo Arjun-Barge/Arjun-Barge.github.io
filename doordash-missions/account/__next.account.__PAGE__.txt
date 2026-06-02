@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[97367,["/doordash-missions/_next/static/chunks/0va1jb9j3b2wn.js","/doordash-missions/_next/static/chunks/0v48hsoo4zjwo.js","/doordash-missions/_next/static/chunks/13~hfnhe70z8m.js","/doordash-missions/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+3:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"className":"flex flex-col items-center justify-center h-full text-center px-6","children":[["$","h1",null,{"className":"text-2xl font-semibold mb-2","children":"Account"}],["$","p",null,{"className":"text-muted-foreground","children":"Account settings placeholder."}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"-e0IwJeAP_MN8hJemEe3V"}
+4:null
